@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+// _base.scss
+$font-stack-h1: PT Serif, serif;
+$font-stack-h2-p: Poppins, sans-serif;
+$font-stack-footer: Montserrat, sans-serif;
+$primary-color: #000000;
+$secondry-color: #a9a9a9;
+
+body {
+    width: 100%;
+    height: auto;
+    color: $primary-color;
+    background: #fafafa;
+}
+
+/* ----- Team ----- */
+.team {
+    width: fit-content;
+    margin-top: 4.5rem;
+}
+
+.team h1 {
+    font-family: $font-stack-h1;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    letter-spacing: -0.045em;
+    padding-left: 1rem;
+}
+
+.team h2 {
+    font-family: $font-stack-h2-p;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    text-transform: uppercase;
+    margin-top: 2.2rem;
+    padding-left: 1rem;
+}
+
+.team p {
+    font-family: $font-stack-h2-p;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    margin-top: 0.625rem;
+    padding-left: 1rem;
+}
+
+.team-members {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 3rem 0;
+}
+
+.member {
+    width: 45%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.member:nth-child(even) {
+    margin-top: 5rem;
+}
+
+.member h3 {
+    font-family: $font-stack-h1;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+}
+
+.title-pic {
+    display: block;
+
+    animation: slideInUp, slideInDown;
+    animation-duration: 2s, 2s;
+    animation-delay: 0s, 4s;
+}
+
+@media (print), (prefers-reduced-motion: reduce) {
+    .animate__slideInUp {
+        display: none;
+    }
+}
+
+.title-pic img {
+    width: 90%;
+    height: auto;
+}
+
+.title-pic p {
+    font-family: $font-stack-h2-p;
+    font-size: 0.625rem;
+    line-height: 0.8125rem;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+/* ----- Footer ----- */
+footer {
+    clear: both;
+    margin: 2rem 0;
+}
+footer p {
+    font-family: $font-stack-footer;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    text-align: center;
+    color: $secondry-color;
+}
+
+/* ----- @media ----- */
+
+@media (min-width: 1440px) {
+    body {
+        max-width: 80%;
+        margin: auto;
+    }
+    /* ----- Team ----- */
+    .team {
+        margin-top: 6rem;
+    }
+
+    .head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        text-align: start;
+    }
+
+    .head h1 {
+        font-family: $font-stack-h1;
+        font-weight: 700;
+        font-size: 2.25rem;
+        line-height: 3rem;
+        letter-spacing: -0.045em;
+    }
+
+    .detial {
+        width: 35%;
+    }
+
+    .detial p {
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+
+    .team-members {
+        margin: 2rem 0;
+    }
+
+    .member {
+        width: 33%;
+
+        padding: 0 1.4375em;
+    }
+
+    .member:nth-child(3n + 2) {
+        margin-top: 15rem;
+    }
+
+    .member h3 {
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+
+    .title-pic img {
+        width: 95%;
+        height: auto;
+    }
+
+    .title-pic p {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    /* ----- Footer ----- */
+    footer {
+        clear: both;
+        margin: 7rem 0 2rem 0;
+    }
+}
